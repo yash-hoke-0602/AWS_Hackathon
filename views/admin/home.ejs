@@ -1,0 +1,41 @@
+<title>Admin Home</title>
+
+<body>
+        	<!-- header -->
+	<header>
+		<!-- navigation -->
+		<nav class="navbar navbar-expand-lg navbar-light px-sm-5 px-3 py-0">
+			<h1>
+				<a class="navbar-brand py-2" href="/"><img src="/images/logo.jpg" alt="logo"></a>
+			</h1>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+			    aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+		</nav>
+		<!-- //navigation -->
+	</header>
+	<div >
+		<div class="col-md-8 offset-md-2">
+            <% if(username !=null ) {%>
+				<h1>Admin Home 
+				
+				</h1>
+				<a href="/admin/allOrders"><button class="btn btn-dark" style="position:absolute; margin-left: 50%;margin-top: 1%;">AllOrder</button></a> 
+				<a href="/admin/logout"><button class="btn btn-dark" style="margin-left: 58%;position:absolute;margin-top: 1%;">Logout</button></a> 
+                    <hr>
+                    <h2 style="margin-left: 30%;">Welcome <%= username %></h2>
+                <% }else { %>
+                    <h1>Admin Home <a href="/admin/login"><button class="btn btn-primary" style="margin-left: 60%;">Login</button></a>  </h1>
+                    
+                    <hr>
+        
+                <h2 style="margin-left: 35%;margin-top: 20%;">Please Login</h2>
+            <% } %>
+            
+		</div>
+	</div>
+</body>
+
+</html>
